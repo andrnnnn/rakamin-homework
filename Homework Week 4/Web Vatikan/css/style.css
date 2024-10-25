@@ -1,0 +1,114 @@
+/* ========================= */
+/*      Navbar Styling       */
+/* ========================= */
+.navbar-brand {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+/* ========================= */
+/*  Carousel Banner Styling  */
+/* ========================= */
+#carouselBanner .carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#carouselBanner .carousel-item:nth-child(1) {
+    background-image: url("../img/banner-img1.jpg");
+}
+
+#carouselBanner .carousel-item:nth-child(2) {
+    background-image: url("../img/banner-img2.jpg");
+}
+
+#carouselBanner .carousel-item:nth-child(3) {
+    background-image: url("../img/banner-img3.jpg");
+}
+
+.carousel-caption {
+    bottom: 20%;
+    font-family: "Arvo", serif;
+}
+
+/* ========================= */
+/*      Gallery Styling      */
+/* ========================= */
+.gallery-img {
+    height: 300px;
+    object-fit: cover;
+}
+
+#gallery .title {
+    font-family: "Arvo", serif;
+}
+
+/* ========================= */
+/*        Zoom Effect        */
+/* ========================= */
+.zoom-img {
+    transition: transform 0.5s ease;
+}
+
+.zoom-img:hover {
+    transform: scale(1.1);
+}
+
+/* ========================= */
+/*     Description Overlay   */
+/* ========================= */
+.description-overlay {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.description-overlay .description {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    font-size: xx-small;
+}
+
+/* ========================= */
+/*        Hover Effect       */
+/* ========================= */
+.zoom-img:hover + .description-overlay .description {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========================= */
+/*  Carousel Content Styling */
+/* ========================= */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-family: "Arvo", serif;
+}
+
+.card-text {
+    font-size: small;
+}
+
+/* ========================= */
+/* Styling khusus untuk layar di bawah 576px */
+/* ========================= */
+@media (max-width: 576px) {
+    body {
+        background-color: rgb(35, 40, 43);
+        color: white;
+    }
+    #gallery {
+        background-color: white !important;
+        color: black !important;
+    }
+}

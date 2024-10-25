@@ -1,0 +1,102 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.container {
+    margin-top: 50px;
+}
+h1 {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.card {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+.alert-info {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #e7f3fe;
+    border-color: #b3d7ff;
+}
+.form-label {
+    font-weight: 600;
+}
+.icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.total-title {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    font-weight: 600;
+}   
+.total-price {
+    font-size: 1rem;
+    color: #28a745;
+    font-weight: bold;
+}
+.table th, .table td {
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+.keterangan {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #6c757d;
+}
+
+/* Style untuk Movie Selection */
+.movie-selection {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    width: calc(33.33% - 10px);
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.movie-card:hover {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.movie-card.selected {
+    border-color: #007bff;
+    background-color: #f8f9fa;
+}
+
+.movie-poster {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.movie-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}

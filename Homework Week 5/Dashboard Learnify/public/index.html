@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Learnify | Dashboard</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    </head>
+    <body class="bg-gray-900 text-white">
+        <div class="flex flex-col md:flex-row h-screen">
+            <!-- Sidebar -->
+            <div class="bg-gray-800 text-white w-full md:w-64 p-6 hidden md:block" id="sidebar">
+                <div class="flex items-center mb-8">
+                    <img alt="Logo" class="h-12 w-12" height="48" src="img/logo.svg" width="48" />
+                    <span class="ml-3 text-2xl font-bold"> LEARNIFY </span>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="mb-4">
+                            <a class="flex items-center p-2 bg-gray-700 rounded hover:bg-gray-600" href="index.html">
+                                <i class="fas fa-tachometer-alt mr-3"> </i>
+                                <span> Dashboard </span>
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a class="flex items-center p-2 hover:bg-gray-600" href="course.html">
+                                <i class="fas fa-layer-group mr-3"> </i>
+                                <span> Kursus </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flex items-center p-2 hover:bg-gray-600" href="profile.html">
+                                <i class="fas fa-user mr-3"> </i>
+                                <span> Profile </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Main content -->
+            <div class="flex-1 p-6">
+                <!-- Top bar -->
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center">
+                        <button class="md:hidden text-white focus:outline-none" id="menuToggle">
+                            <i class="fas fa-bars text-2xl" id="hamburgerIcon"> </i>
+                            <i class="fas fa-times text-2xl hidden" id="closeIcon"> </i>
+                        </button>
+                        <div class="text-2xl font-bold ml-4 md:ml-0">Dashboard Siswa</div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="relative">
+                            <i class="fas fa-bell text-xl mr-4 cursor-pointer" id="notificationToggle"> </i>
+                            <!-- Notification dropdown -->
+                            <div class="absolute right-0 mt-2 w-64 bg-gray-800 text-white rounded-md shadow-lg py-2 z-20 hidden" id="notificationMenu">
+                                <div class="px-4 py-2 border-b border-gray-700">
+                                    <strong> Pemberitahuan </strong>
+                                </div>
+                                <div class="px-4 py-2 border-b border-gray-700">
+                                    Waktu pengumpulan tugas akan berakhir <br />
+                                    <div class="text-xs text-gray-500">Batas waktu pengumpulan tugas akan segera berakhir, mohon segera lengkapi tugas anda! <br />13 Oktober 2024</div>
+                                </div>
+                                <div class="px-4 py-2 border-b border-gray-700">
+                                    Kursus baru berhasil ditambahkan <br />
+                                    <div class="text-xs text-gray-500">Anda berhasil menambahkan kursus baru: Matematika Diskrit <br />24 Juni 2024</div>
+                                </div>
+                                <div class="px-4 py-2">
+                                    Tugas baru datang <br />
+                                    <div class="text-xs text-gray-500">Kursus Matematika Diskrit menambahkan tugas baru <br />7 Oktober 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div class="flex items-center cursor-pointer" id="dropdownToggle">
+                                <img alt="User profile picture" class="rounded-full mr-2" height="40" src="img/profile.png" width="40" />
+                                <div>
+                                    <div>Andrian Maulana</div>
+                                    <div class="text-sm text-gray-400">andrianmaulank@gmail.com</div>
+                                </div>
+                                <i class="fas fa-chevron-down ml-2"> </i>
+                            </div>
+                            <!-- Dropdown menu -->
+                            <div class="dropdown-menu absolute right-0 mt-2 w-48 bg-gray-800 text-white rounded-md shadow-lg py-2 z-20 hidden" id="dropdownMenu">
+                                <a class="px-4 py-2 hover:bg-gray-700 flex items-center" href="profile.html">
+                                    <i class="fas fa-user mr-2"> </i>
+                                    My Profile
+                                </a>
+                                <a class="px-4 py-2 hover:bg-gray-700 flex items-center" href="#">
+                                    <i class="fas fa-sign-out-alt mr-2"> </i>
+                                    Log Out
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dashboard cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <a href="course.html">
+                        <div class="bg-gray-800 p-6 rounded shadow hover:bg-gray-700">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-layer-group text-3xl"> </i>
+                            </div>
+                            <div class="text-3xl font-bold">4</div>
+                            <div>Kursus Diikuti</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="bg-gray-800 p-6 rounded shadow hover:bg-gray-700">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-check-circle text-3xl"> </i>
+                            </div>
+                            <div class="text-3xl font-bold">3</div>
+                            <div>Kursus Selesai</div>
+                        </div>
+                    </a>
+                    <a href="task.html">
+                        <div class="bg-gray-800 p-6 rounded shadow hover:bg-gray-700">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-layer-group text-3xl"> </i>
+                            </div>
+                            <div class="text-3xl font-bold">2</div>
+                            <div>Tugas Anda</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="bg-gray-800 p-6 rounded shadow hover:bg-gray-700">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-check-circle text-3xl"> </i>
+                            </div>
+                            <div class="text-3xl font-bold">1</div>
+                            <div>Tugas Selesai</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Toggle dropdown menu
+            document.getElementById("dropdownToggle").addEventListener("click", function () {
+                document.getElementById("dropdownMenu").classList.toggle("hidden");
+            });
+            // Toggle notification menu
+            document.getElementById("notificationToggle").addEventListener("click", function () {
+                document.getElementById("notificationMenu").classList.toggle("hidden");
+            });
+            // Toggle sidebar menu
+            document.getElementById("menuToggle").addEventListener("click", function () {
+                document.getElementById("sidebar").classList.toggle("hidden");
+                document.getElementById("hamburgerIcon").classList.toggle("hidden");
+                document.getElementById("closeIcon").classList.toggle("hidden");
+            });
+        </script>
+    </body>
+</html>
